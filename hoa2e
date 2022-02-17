@@ -1,0 +1,25 @@
+# Integer input determines half of the height * 2 of the diamond
+# The Diamond's shape increases through "*" +2
+
+x=''
+
+while(x != -1):
+    x = int(input())
+    i = 0
+    i2= 0
+    y=''
+    i2 = 0
+    z=''
+    while(i<=x):#prints top half + middle row of the diamond
+        y =" "*(x-i) + "*"*i #prints out the left side of the shape
+        y = y + ("*"*(i-1) + " "*(x-i)) #prints right side. Less asterisks (via (i-1)) to provide the right side space
+        print(y)
+        i += 1
+    while(i2<=x):#prints bottom half. no middle row of the diamond
+        if i2==0: #continue on the first loop so it doesn't reprint the longest row, which was printed from loop 1
+            i2+=1
+            continue
+        z =" "*(i2) + "*"*(x-i2) #prints out the bottom left side of the shape
+        z = z + ("*"*(x-(i2+1)) + " "*(i2)) #prints bottom right side.
+        print(z)
+        i2 += 1
