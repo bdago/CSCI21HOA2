@@ -1,0 +1,12 @@
+x=''
+while (x != -1):
+    x = int(input())
+    y = ""  
+    i = 1
+    while (i<=x):
+        y = y + str(i)
+        i += 1
+        print(y)
+    
+
+
